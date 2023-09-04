@@ -15,8 +15,10 @@ string timeConversion(string s) {
 
             if(hr<10)
                 s.replace(0,1,"0");
-            else
+            else if(hr<20)
                 s.replace(0,1,"1");
+			else
+				s.replace(0,1,"2");
 
             s.replace(1,1,string(1,(char)((hr%10)+48)));
         }
